@@ -16,6 +16,7 @@ for (const folder of commandFolders) {
 }
 const rest = new REST({ version: '9' }).setToken(token);
 
+// here it defines the commands in just one server
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 	.then(() => console.log('Successfully registered application commands for in the test guild!'))
 	.catch(console.error);

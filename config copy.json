@@ -1,0 +1,27 @@
+{
+    "token": "",
+    "clientId": "",
+    "guildId": "",
+
+    "roles": {
+        "Owner": "",
+
+        "Lead_developer": "",
+        "Developers": "",
+        
+        "Admins": "",
+        "Mods": "",
+        "Support": "",
+
+        "Patreons": "",
+        "Parnters": ""
+    },
+    "logs_chan": "",
+    "error_channel": "",
+    "colors": {
+        "default": "#61bcff",
+        "admin": "#790000",
+        "mod": "#003879",
+        "owner": "#5400ff"
+    }
+}
