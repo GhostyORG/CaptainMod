@@ -1,0 +1,26 @@
+{
+  "name": "ghosty-mod-bot",
+  "version": "0.0.1",
+  "description": "A mod-bot for ghosty-development",
+  "main": "start.js",
+  "scripts": {
+    "test": "nodemon ."
+  },
+  "keywords": [
+    "mod-bot"
+  ],
+  "author": "Commander R#9371",
+  "license": "UNLICENSED",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/orgs/GhostyORG.git"
+  },
+  "bugs": {
+    "url": "https://github.com/orgs/GhostyORG/issues"
+  },
+  "homepage": "https://github.com/orgs/GhostyORG#readme",
+  "dependencies": {
+    "@discordjs/rest": "^1.0.1",
+    "discord.js": "^14.1.1"
+  }
+}
