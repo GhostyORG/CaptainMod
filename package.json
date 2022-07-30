@@ -21,6 +21,7 @@
   "homepage": "https://github.com/GhostyORG/CaptainMod#readme",
   "dependencies": {
     "@discordjs/rest": "^1.0.1",
-    "discord.js": "^14.1.1"
+    "discord.js": "^14.1.1",
+    "moment": "^2.29.4"
   }
 }

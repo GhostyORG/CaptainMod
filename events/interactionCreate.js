@@ -10,7 +10,7 @@ client.on('interactionCreate', async interaction => {
 	} catch (error) {
         console.error(error);
 	    	const errorchan = client.channels.cache.get(config.error_channel);
-            const embed = new discord.MessageEmbed()
+            const embed = new discord.EmbedBuilder()
             	.setTitle(`⚠️ERROR⚠️`)
             	.setDescription(`error:\n\`\`\`${error}\`\`\``)
             	.addField(`User`, interaction.member)

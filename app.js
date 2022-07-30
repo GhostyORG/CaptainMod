@@ -8,6 +8,10 @@ const client = new Client({ intents: [ GatewayIntentBits.Guilds, GatewayIntentBi
 
 // globally devine the client
 global.client = client;
+// globally devines the config file
+global.config = config;
+// globally devindes the discord package
+global.discord = Discord;
 
 
 // pushes the command names to a file so in the help command you can give them all a seperate category
