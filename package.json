@@ -1,5 +1,5 @@
 {
-  "name": "ghosty-mod-bot",
+  "name": "captain-mod",
   "version": "0.0.1",
   "description": "A mod-bot for ghosty-development",
   "main": "start.js",
@@ -13,12 +13,12 @@
   "license": "UNLICENSED",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/orgs/GhostyORG.git"
+    "url": "git+https://github.com/GhostyORG/CaptainMod.git"
   },
   "bugs": {
-    "url": "https://github.com/orgs/GhostyORG/issues"
+    "url": "https://github.com/GhostyORG/CaptainMod/issues"
   },
-  "homepage": "https://github.com/orgs/GhostyORG#readme",
+  "homepage": "https://github.com/GhostyORG/CaptainMod#readme",
   "dependencies": {
     "@discordjs/rest": "^1.0.1",
     "discord.js": "^14.1.1"
