@@ -65,12 +65,12 @@ module.exports = {
                 return;
             }
             // checks if the user has the role
-            if (member.roles.includes(role)) {
+            if (member.roles.cache.some(r => r.id === role.id)) {
                 interaction.reply({content: `The role you specified is already taken by this user`})
                 return;
             }
             // add the role to the user
-            interaction.member.guild.members.cache.get(user).roles.add(role);
+            member.roles.add(role);
             interaction.reply({content: `Added role ${role} to ${user}.`});
         }
 	},
