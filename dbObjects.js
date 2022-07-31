@@ -11,4 +11,4 @@ const Users = require('./models/users.js')(sequelize, Sequelize.DataTypes);
 const Guilds = require('./models/guilds.js')(sequelize, Sequelize.DataTypes);
 
 
-module.exports = { Users, Guilds, Backups };
+module.exports = { Users, Guilds };
