@@ -6,19 +6,19 @@ module.exports = {
 		.setDescription('Role management')
         .addSubcommand(subcommand => subcommand
             .setName('add')
-            .setDescription('Adds a role to a user')
+            .setDescription('Adds a role to a stupid user')
             .addUserOption(option => option.setName('user').setDescription(`The user to add the role to`).setRequired(true))
             .addRoleOption(option => option.setName('role').setDescription(`The role to add to the user`).setRequired(true))
         )
         .addSubcommand(subcommand => subcommand
             .setName('remove')
-            .setDescription('Removes a role from a user')
+            .setDescription('Removes a role from the stupid user')
             .addUserOption(option => option.setName('user').setDescription(`The user to remove the role from`).setRequired(true))
             .addRoleOption(option => option.setName('role').setDescription(`The role to remove from the user`).setRequired(true))
         )
         .addSubcommand(subcommand => subcommand
             .setName('create')
-            .setDescription('Creates a role')
+            .setDescription('Creates a dumb role')
             .addStringOption(option => option.setName('name').setDescription(`The name of the role`).setRequired(true))
             .addStringOption(option => option.setName('color').setDescription(`The color of the role`).setRequired(true))
             .addBooleanOption(option => option.setName('hoist').setDescription(`Whether the role is hoisted`))
