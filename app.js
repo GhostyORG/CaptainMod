@@ -2,9 +2,12 @@ const fs = require('node:fs')
 const { Client, GatewayIntentBits, Collection } = require('discord.js');
 const Discord = require('discord.js');
 const config = require('./config.json')
-
+const { Users, Guilds, Backups } = require('./dbObjects.js');
 
 const client = new Client({ intents: [ GatewayIntentBits.Guilds, GatewayIntentBits.MessageContent, GatewayIntentBits.GuildPresences, GatewayIntentBits.GuildMembers ] });
+
+
+
 
 // globally devine the client
 global.client = client;
@@ -12,7 +15,10 @@ global.client = client;
 global.config = config;
 // globally devindes the discord package
 global.discord = Discord;
-
+// globally define users and guilds
+global.users = Users;
+global.guilds = Guilds;
+global.backups = Backups;
 
 // pushes the command names to a file so in the help command you can give them all a seperate category
 const { infocmd, modcmd, miscmd } = require(`./commands.json`);

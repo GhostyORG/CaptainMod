@@ -1,6 +1,8 @@
+const { Guilds } = require('../dbObjects.js');
+
 module.exports = {
 	name: 'guildCreate',
-	execute(guild) {
+	async execute(guild) {
 		// gets the bots logging channel
 		const b_logs = client.channels.cache.get(config.channels.logs_chan);
         
@@ -19,5 +21,10 @@ module.exports = {
 
 		// sends the embed to the log channel
 		b_logs.send({embeds: [embed]})
+		await Guilds.create({
+			guildId: guild.id,
+		}).then(() => {
+			console.log(`Guild ${guild.name} has been added to the database!`);
+		})
 	},
 };

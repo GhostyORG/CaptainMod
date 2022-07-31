@@ -4,7 +4,7 @@
   "description": "A mod-bot for ghosty-development",
   "main": "start.js",
   "scripts": {
-    "test": "nodemon ."
+    "dev": "nodemon ."
   },
   "keywords": [
     "mod-bot"
@@ -21,7 +21,10 @@
   "homepage": "https://github.com/GhostyORG/CaptainMod#readme",
   "dependencies": {
     "@discordjs/rest": "^1.0.1",
-    "discord.js": "^14.1.1",
-    "moment": "^2.29.4"
+    "discord-backup": "^3.2.1",
+    "discord.js": "^14.1.2",
+    "moment": "^2.29.4",
+    "sequelize": "^6.21.3",
+    "sqlite3": "^5.0.11"
   }
 }

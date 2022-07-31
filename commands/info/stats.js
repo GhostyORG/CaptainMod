@@ -16,7 +16,7 @@ module.exports = {
 
 
         const embed = new EmbedBuilder()
-            .setTitle('Statistics')
+            .setTitle('__Statistics:__')
             .setThumbnail(`${client.user.displayAvatarURL({ dynamic: true })}`)
             .setColor(`${config.colors.default}`)
             .addFields(

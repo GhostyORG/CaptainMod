@@ -45,4 +45,24 @@ client.on('interactionCreate', async interaction => {
         // sends the embed to the bug channel
         bugchan.send({embeds: [embed]})
 	}
+    if (interaction.customId === 'data-deletion') {
+        // replies to the command
+		await interaction.reply({ content: 'Your Data Deletion Request has been sent to the developers!', ephemeral: true });
+
+        //finds the correct channel
+        const rdrchan = client.channels.cache.get(config.channels.remove_data);
+
+        // creates the embed with the modals input fields content
+        const embed = new discord.EmbedBuilder()
+            .setTitle(`🗑️Data Deletion Request🗑️`)
+            .addFields(
+                {name: `reason`, value: `${interaction.fields.getTextInputValue('longText')}`, inline: true},
+            )
+            .addFields({name: `User`, value: `${interaction.member}`})
+            .setColor(`${config.colors.default}`)
+            // add a timestamp
+            .setTimestamp()
+        // sends the embed to the remove data request channel
+        rdrchan.send({embeds: [embed]})
+	}
 });

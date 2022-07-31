@@ -22,6 +22,11 @@ module.exports = {
         var user = interaction.options.getUser('user');
         // get the guildmember of the user
         var guildmember = interaction.guild.members.cache.get(user.id);
+        
+        if (guildmember.permissions.has(PermissionsBitField.Flags.Administrator)) {
+            return interaction.reply({content: `You can't mute someone who have admin, you stupid`});
+        }
+
         // gets the amount of time the user needs a timeout for
         var time = interaction.options.getNumber('time');
         // gets the reason for the timeout

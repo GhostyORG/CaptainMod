@@ -1,3 +1,4 @@
+const { Guilds } = require('../dbObjects.js');
 module.exports = {
 	name: 'guildDelete',
 	execute(guild) {
@@ -19,5 +20,15 @@ module.exports = {
 
 		// sends the embed to the log channel
 		b_logs.send({embeds: [embed]})
+		Guilds.destroy({
+			where: {
+				guildId: guild.id,
+			}
+		}).then(() => {
+			console.log(`Guild ${guild.name} has been removed from the database!`);
+		}
+		).catch(err => {
+			console.log(err);
+		});
 	},
 };

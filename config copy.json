@@ -3,6 +3,8 @@
     "clientId": "",
     "guildId": "",
 
+    "version": "0.0.2 || Beta",
+
     "roles": {
         "Owner": "",
 
@@ -16,12 +18,30 @@
         "Patreons": "",
         "Parnters": ""
     },
-    "logs_chan": "",
-    "error_channel": "",
+
+    "channels": {
+        "logs_chan": "",
+        "error_channel": "",
+        "suggestion_channel": "",
+        "bug_channel": "",
+        "remove_data": ""
+    },
+
     "colors": {
         "default": "#61bcff",
         "admin": "#790000",
         "mod": "#003879",
-        "owner": "#5400ff"
+        "owner": "#5400ff",
+        
+
+        "green": "#65ff2f",
+        "red": "#ff2f2f"
+    },
+    "links": {
+        "invite": "https://discordapp.com/api/oauth2/authorize?client_id=1002586082694672445&permissions=8&scope=bot",
+        "github": "https://github.com/GhostyORG/CaptainMod",
+        "donate": "",
+        "support": "https://discord.gg/F8tkBafhUa",
+        "website": "https://ghostydevs.vercel.app/"
     }
 }

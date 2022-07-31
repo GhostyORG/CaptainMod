@@ -20,3 +20,8 @@ const rest = new REST({ version: '9' }).setToken(token);
 rest.put(Routes.applicationGuildCommands(clientId, guildId), { body: commands })
 	.then(() => console.log('Successfully registered application commands for in the test guild!'))
 	.catch(console.error);
+
+
+// rest.put(Routes.applicationCommands(clientId), { body: commands })
+//  	.then(() => console.log('Successfully registered application commands globally!.'))
+//  	.catch(console.error);
