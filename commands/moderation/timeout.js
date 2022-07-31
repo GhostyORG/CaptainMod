@@ -1,4 +1,4 @@
-const { SlashCommandBuilder, EmbedBuilder } = require('discord.js');
+const { SlashCommandBuilder, EmbedBuilder, PermissionsBitField  } = require('discord.js');
 
 module.exports = {
 	data: new SlashCommandBuilder()
@@ -8,6 +8,16 @@ module.exports = {
         .addNumberOption(option => option.setName('time').setDescription('The amount of time the user needs a timeout for.').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('The reason for the timeout.')),
 	async execute(interaction) {
+
+
+        const Intuser = interaction.user
+        var intGuildmember = interaction.guild.members.cache.get(Intuser.id);
+        if (!intGuildmember.permissions.has(PermissionsBitField.Flags.ManageMembers)) {
+            return interaction.reply({content: `You don't have the permissions to do this idiot!`});
+        }
+
+
+
         // gets the user to timeout
         var user = interaction.options.getUser('user');
         // get the guildmember of the user
@@ -17,7 +27,7 @@ module.exports = {
         // gets the reason for the timeout
         var reason = interaction.options.getString('reason');
         // if the reason isn't filled in, it uses the default reason
-        if(!reason) reason = "No reason given";
+        if(!reason) reason = "There wasn't a reason, just shut up";
     
         // creates the embed for the timeout
         const embed = new EmbedBuilder()
@@ -30,7 +40,6 @@ module.exports = {
         // times out the user and when successful the bot will send the embed
         guildmember.timeout(time * 60 * 1000, reason)
         .then(async () => {
-            console.log("Timed out member");
             await interaction.reply({embeds: [embed]});
         })
         // if there's an err it'll log it and reply to the user
