@@ -7,6 +7,7 @@ module.exports = {
 		.setDescription('View statistics of the bot'),
 	async execute(interaction) {
 
+        // gets the days hours minutes and seconds of the uptime of the bot
         const d = moment.duration(client.uptime);
         const days = (d.days() == 1) ? `${d.days()} day` : `${d.days()} days`;
         const hours = (d.hours() == 1) ? `${d.hours()} hour` : `${d.hours()} hours`;

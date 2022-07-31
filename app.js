@@ -15,7 +15,7 @@ global.discord = Discord;
 
 
 // pushes the command names to a file so in the help command you can give them all a seperate category
-const { infocmd } = require(`./commands.json`);
+const { infocmd, modcmd, miscmd } = require(`./commands.json`);
 const commandFolders = fs.readdirSync('./commands');
 
 for(const folder of commandFolders) {
@@ -29,6 +29,24 @@ for(const folder of commandFolders) {
         )
       }
     }
+	
+	if(folder === 'moderation'){
+		for (const file of commandFiles) {
+		  const command = require(`./commands/moderation/${file}`);
+		  modcmd.push(
+			file.replace('.js', '')
+		  )
+		}
+	}
+
+	if(folder === 'misc'){
+		for (const file of commandFiles) {
+		  const command = require(`./commands/misc/${file}`);
+		  miscmd.push(
+			file.replace('.js', '')
+		  )
+		}
+	}
 }
 
 
