@@ -5,7 +5,7 @@ module.exports = {
 		.setName('timeout')
 		.setDescription('Give a member a timeout')
         .addUserOption(option => option.setName('user').setDescription('The user to timeout.').setRequired(true))
-        .addNumberOption(option => option.setName('time').setDescription('The amount of time the user needs a timeout for.').setRequired(true))
+        .addNumberOption(option => option.setName('time').setDescription('The amount of time in minutes the user needs a timeout for.').setRequired(true))
         .addStringOption(option => option.setName('reason').setDescription('The reason for the timeout.')),
 	async execute(interaction) {
 
