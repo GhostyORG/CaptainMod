@@ -3,7 +3,7 @@ const { SlashCommandBuilder, ModalBuilder, TextInputBuilder, TextInputStyle, Act
 module.exports = {
 	data: new SlashCommandBuilder()
 		.setName('data_deletion')
-		.setDescription('Suggest a feature!'),
+		.setDescription('Request for your data to be deleted!'),
 	async execute(interaction) {
         // build the modal
         const modal = new ModalBuilder()

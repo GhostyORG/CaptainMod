@@ -13,13 +13,13 @@ module.exports = {
         // new short inputfield
         const input = new TextInputBuilder()
             .setCustomId('shortText')
-            .setLabel('Enter the bug you find idiot')
+            .setLabel('Enter the bug you found idiot')
             .setStyle(TextInputStyle.Short)
 
         // new long inputfield
         const input2 = new TextInputBuilder()
         .setCustomId('longText')
-        .setLabel('Explain what gave the stupid bug')
+        .setLabel('Explain what you did that gave the stupid bug')
         .setStyle(TextInputStyle.Paragraph)
 
         // An action row only holds one text input,
