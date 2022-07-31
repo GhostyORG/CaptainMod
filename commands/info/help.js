@@ -14,11 +14,11 @@ module.exports = {
 
     const { infocmd, modcmd, miscmd } = require('../../commands.json');
 
-    embed.addFields({name: `INFORMATION`, value: `${infocmd.toString().replace(/,/g, ",\n")}`, inline: true})
+    embed.addFields({name: `__INFORMATION:__`, value: `${infocmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
-    embed.addFields({name: `MODERATION`, value: `${modcmd.toString().replace(/,/g, ",\n")}`, inline: true})
+    embed.addFields({name: `__MODERATION:__`, value: `${modcmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
-    embed.addFields({name: `MISCELLANEOUS`, value: `${miscmd.toString().replace(/,/g, ",\n")}`, inline: true})
+    embed.addFields({name: `__MISCELLANEOUS:__`, value: `${miscmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
     const row = new discord.ActionRowBuilder()
 			.addComponents(
