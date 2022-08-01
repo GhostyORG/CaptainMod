@@ -46,9 +46,47 @@ module.exports = {
             interaction.reply({content: `You don't have the required permissions to use this command.`});
             return;
         }
+
+        function roleCheck(role, user) {
+            const rolePos = role.position;
+            const guildMember = interaction.guild.members.cache.get(user.id);
+            const memHighRole = guildMember.roles.highest.position;
+            if(rolePos >= memHighRole) {
+                return true;
+            }  
+            else {
+                return false
+            }   
+        }
+
+        function clientCheck(role) {
+            const rolePos = role.position;
+            const clientHighRole = interaction.guild.members.me.roles.highest.position;
+            if(rolePos >= clientHighRole) {
+                return true;
+            }
+            else {
+                return false
+            }   
+        }
+
+
+
+
         // here it checks which subcommand the user has executed
         const sub = interaction.options.getSubcommand();
         if (sub === 'add') {
+            var memRoleCheck = roleCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id), interaction.user);
+            if(memRoleCheck === true) {
+                interaction.reply({content: `You can't give a role that's higher than your highest role.`});
+                return;
+            }
+
+            var clientRoleCheck = clientCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id));
+            if(clientRoleCheck === true) {
+                interaction.reply({content: `You can't give a role that's higher than the bot's highest role.`});
+                return;
+            }
             // gets the user
             const user = interaction.options.getUser('user');
             const member = interaction.guild.members.cache.get(user.id);
@@ -80,6 +118,17 @@ module.exports = {
             interaction.reply({embeds: [embed]});
         }
         if(sub === 'remove'){
+            var memRoleCheck = roleCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id), interaction.user);
+            if(memRoleCheck === true) {
+                interaction.reply({content: `You can't remove a role that's higher than your highest role.`});
+                return;
+            }
+
+            var clientRoleCheck = clientCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id));
+            if(clientRoleCheck === true) {
+                interaction.reply({content: `You can't remove a role that's higher than the bot's highest role.`});
+                return;
+            }
             // gets the user
             const user = interaction.options.getUser('user');
             const member = interaction.guild.members.cache.get(user.id);
@@ -136,6 +185,17 @@ module.exports = {
             interaction.reply({embeds: [embed]});
         }
         if(sub === 'delete'){
+            var memRoleCheck = roleCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id), interaction.user);
+            if(memRoleCheck === true) {
+                interaction.reply({content: `You can't delete a role that's higher than your highest role.`});
+                return;
+            }
+
+            var clientRoleCheck = clientCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id));
+            if(clientRoleCheck === true) {
+                interaction.reply({content: `You can't delete a role that's higher than the bot's highest role.`});
+                return;
+            }
             // finds the role
             const role = interaction.options.getRole('role');
             role.delete();
@@ -147,6 +207,17 @@ module.exports = {
             interaction.reply({embeds: [embed]});
         }
         if(sub === 'edit'){
+            var memRoleCheck = roleCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id), interaction.user);
+            if(memRoleCheck === true) {
+                interaction.reply({content: `You can't edit a role that's higher than your highest role.`});
+                return;
+            }
+
+            var clientRoleCheck = clientCheck(interaction.guild.roles.cache.get(interaction.options.getRole('role').id));
+            if(clientRoleCheck === true) {
+                interaction.reply({content: `You can't edit a role that's higher than the bot's highest role.`});
+                return;
+            }
             // finds the role
             const role = interaction.options.getRole('role');
             const hoist = interaction.options.getBoolean('hoist');
