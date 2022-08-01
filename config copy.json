@@ -3,7 +3,7 @@
     "clientId": "",
     "guildId": "",
 
-    "version": "0.0.2 || Beta",
+    "version": "0.0.1 || Beta",
 
     "roles": {
         "Owner": "",
@@ -16,7 +16,7 @@
         "Support": "",
 
         "Patreons": "",
-        "Partners": ""
+        "Parnters": ""
     },
 
     "channels": {
@@ -31,11 +31,7 @@
         "default": "#61bcff",
         "admin": "#790000",
         "mod": "#003879",
-        "owner": "#5400ff",
-        
-
-        "green": "#65ff2f",
-        "red": "#ff2f2f"
+        "owner": "#5400ff"
     },
     "links": {
         "invite": "https://discordapp.com/api/oauth2/authorize?client_id=1002586082694672445&permissions=8&scope=bot",
