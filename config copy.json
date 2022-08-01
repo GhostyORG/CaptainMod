@@ -35,6 +35,7 @@
     },
     "links": {
         "invite": "https://discordapp.com/api/oauth2/authorize?client_id=1002586082694672445&permissions=8&scope=bot",
+        "invite2": "https://discord.com/oauth2/authorize?client_id=1002586082694672445&scope=bot&permissions=277428366350",
         "github": "https://github.com/GhostyORG/CaptainMod",
         "donate": "",
         "support": "https://discord.gg/F8tkBafhUa",
