@@ -94,6 +94,8 @@ eventFiles.forEach(file => {
 	console.log(`${file.replace(".js", "")} loaded!`);
 })
 console.log('\nloaded in events\n_________________________________________________________\n');
+console.log(`Database loaded successfully.`)
+console.log(`Loaded website on port 3000.`)
 
 
 // Here it logs in into the bot
