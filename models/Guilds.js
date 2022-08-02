@@ -16,6 +16,18 @@ module.exports = (sequelize, DataTypes) => {
         log_chan: {
             type: DataTypes.STRING,
         },
+        welcomeSetting: {
+            type: DataTypes.BOOLEAN,
+        },
+        joinRoleSetting: {
+            type: DataTypes.BOOLEAN,
+        },
+        leaveMessage: {
+            type: DataTypes.STRING,
+        },
+        welcomeMessage: {
+            type: DataTypes.STRING,
+        },
 
 	}, {
 		timestamps: false,

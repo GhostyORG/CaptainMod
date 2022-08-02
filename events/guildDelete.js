@@ -20,12 +20,5 @@ module.exports = {
 
 		// sends the embed to the log channel
 		b_logs.send({embeds: [embed]})
-		Guilds.destroy({
-			where: {
-				guildId: guild.id,
-			}
-		}).catch(err => {
-			console.log(err);
-		});
 	},
 };

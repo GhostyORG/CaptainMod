@@ -21,10 +21,5 @@ module.exports = {
 
 		// sends the embed to the log channel
 		b_logs.send({embeds: [embed]})
-		await Guilds.create({
-			guildId: guild.id,
-		}).catch(err => {
-			console.log(err);
-		});
 	},
 };
