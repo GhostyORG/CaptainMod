@@ -12,13 +12,15 @@ module.exports = {
       .setColor(`${config.colors.default}`)
 
 
-    const { infocmd, modcmd, miscmd } = require('../../commands.json');
+    const { infocmd, modcmd, miscmd, utility } = require('../../commands.json');
 
     embed.addFields({name: `__INFORMATION:__`, value: `${infocmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
     embed.addFields({name: `__MODERATION:__`, value: `${modcmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
     embed.addFields({name: `__MISCELLANEOUS:__`, value: `${miscmd.toString().replace(/,/g, ",\n")}`, inline: true})
+
+    embed.addFields({name: `__UTILITY:__`, value: `${utility.toString().replace(/,/g, ",\n")}`, inline: true})
 
     const row = new discord.ActionRowBuilder()
 			.addComponents(
