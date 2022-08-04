@@ -4,7 +4,7 @@ module.exports = {
 	name: 'guildCreate',
 	async execute(guild) {
 		// gets the bots logging channel
-		const b_logs = client.channels.cache.get(config.channels.logs_chan);
+		const b_logs = client.channels.cache.get(config.channels.guildjoin_chan);
         
 		// creates the embed for the log channel
         const embed = new discord.EmbedBuilder()
