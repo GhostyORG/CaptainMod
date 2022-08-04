@@ -1,0 +1,19 @@
+# Changes
+
+Made credits.json
+Made credits.js
+Updated config.json
+Updated guildDelete.js
+Updated guildCreate.js
+Made suicidal.json
+Made Hotlines folder 
+Updated app.js 
+Updated guilds.js 
+Added abuse.js, suicide.js
+Updated help.js
+
+# TO-DO
+
+Add abuse hot lines and much more
+Add more moderation commands
+Add anti-raid & anti-nuke

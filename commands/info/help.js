@@ -12,7 +12,7 @@ module.exports = {
       .setColor(`${config.colors.default}`)
 
 
-    const { infocmd, modcmd, miscmd, utility } = require('../../commands.json');
+    const { infocmd, modcmd, miscmd, utility, hl } = require('../../commands.json');
 
     embed.addFields({name: `__INFORMATION:__`, value: `${infocmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
@@ -21,6 +21,8 @@ module.exports = {
     embed.addFields({name: `__MISCELLANEOUS:__`, value: `${miscmd.toString().replace(/,/g, ",\n")}`, inline: true})
 
     embed.addFields({name: `__UTILITY:__`, value: `${utility.toString().replace(/,/g, ",\n")}`, inline: true})
+
+    embed.addFields({name: `__HOTLINES:__`, value: `${hl.toString().replace(/,/g, ",\n")}`, inline: true})
 
     const row = new discord.ActionRowBuilder()
 			.addComponents(

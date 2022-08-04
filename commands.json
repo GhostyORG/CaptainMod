@@ -2,5 +2,6 @@
     "infocmd": [],
     "modcmd": ["ban hard", "ban soft"],
     "miscmd": [],
-    "utility": ["role add", "role edit", "role create", "role remove", "role delete"]
+    "utility": ["role add", "role edit", "role create", "role remove", "role delete"],
+    "hl": ["suicidal", "abuse"]
 }

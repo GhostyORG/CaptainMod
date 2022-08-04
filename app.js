@@ -61,6 +61,15 @@ for(const folder of commandFolders) {
 		  )
 		}
 	}
+
+	if(folder === 'hotlines'){
+		for (const file of commandFiles) {
+		  const command = require(`./commands/hotlines/${file}`);
+		  utility.push(
+			file.replace('.js', '')
+		  )
+		}
+	}
 }
 
 
