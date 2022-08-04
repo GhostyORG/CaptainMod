@@ -13,7 +13,10 @@ module.exports = (sequelize, DataTypes) => {
         leaveChan: {
             type: DataTypes.STRING,
         },
-        log_chan: {
+        guildjoin_chan: {
+            type: DataTypes.STRING,
+        },
+        guildleave_chan: {
             type: DataTypes.STRING,
         },
         welcomeSetting: {
